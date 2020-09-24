@@ -1,11 +1,13 @@
 package com.mohamedali.sfgpetclinic.map;
 
 import com.mohamedali.sfgpetclinic.model.Owner;
-import com.mohamedali.sfgpetclinic.services.CrudService;
+import com.mohamedali.sfgpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class OwnersServiceMapImpl extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+@Service
+public class OwnersServiceMapImpl extends AbstractMapService<Owner, Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -30,5 +32,10 @@ public class OwnersServiceMapImpl extends AbstractMapService<Owner, Long> implem
     @Override
     public Owner findByID(Long id) {
         return super.findByID(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
