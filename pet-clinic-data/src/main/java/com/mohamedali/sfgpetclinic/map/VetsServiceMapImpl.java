@@ -1,7 +1,6 @@
 package com.mohamedali.sfgpetclinic.map;
 
 import com.mohamedali.sfgpetclinic.model.Vet;
-import com.mohamedali.sfgpetclinic.services.CrudService;
 import com.mohamedali.sfgpetclinic.services.VetService;
 import org.springframework.stereotype.Service;
 

@@ -2,9 +2,11 @@ package com.mohamedali.sfgpetclinic.map;
 
 import com.mohamedali.sfgpetclinic.model.Person;
 import com.mohamedali.sfgpetclinic.services.CrudService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PersonsServiceMapImpl extends AbstractMapService<Person, Long> implements CrudService<Person, Long> {
     @Override
     public Set<Person> findAll() {

@@ -1,7 +1,5 @@
 package com.mohamedali.sfgpetclinic.bootstrap;
 
-import com.mohamedali.sfgpetclinic.map.OwnersServiceMapImpl;
-import com.mohamedali.sfgpetclinic.map.VetsServiceMapImpl;
 import com.mohamedali.sfgpetclinic.model.Owner;
 import com.mohamedali.sfgpetclinic.model.Vet;
 import com.mohamedali.sfgpetclinic.services.OwnerService;
@@ -18,10 +16,14 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
+    /*
+        Injected and managed by spring context
+     */
     public DataLoader(OwnerService ownerService, VetService vetService) {
-        this.ownerService = new OwnersServiceMapImpl();
-        this.vetService = new VetsServiceMapImpl();
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
